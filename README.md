@@ -10,7 +10,13 @@
 - `docker-compose up`
 - ブラウザを起動し、`http://localhost:3000` にアクセスする
 
-**Must**
+**DBの見かた(for Docker)**
+- Docker up中に `docker-compose exec db psql -U lse lse_dev`
+- テーブルのリストを見る時は `\dt`
+- テーブルの中身を見る時は `select * from (hoge);`
+- 終了する時は `\q`
+
+**Must (DONE)**
 
 - [x] Demoで動作するプロダクトを開発する
 - [x] Slackでのコミュニケーション
@@ -26,4 +32,8 @@
 - [x] VMやDockerの開発環境構築
 - [x] GitHubアクション上での静的解析(Linterなど)
 - [x] GitHubアクション上での単体テスト実行
+- [ ] ローカルでE2Eテスト実行
 - [ ] GitHubアクション上でのE2Eテスト実行
+- [ ] デプロイ先の変更
+
+その他機能面での実装などについてはIssuesを参照。
